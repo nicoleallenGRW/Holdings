@@ -44,7 +44,7 @@ except psycopg2.Error as e:
     print ("Unable to connect to database: " + str(e))
     
 cursor = conn.cursor()
-cursor.execute(open("holdingsreportmainByramCosCob.sql","r",).read())
+cursor.execute(open("holdingsreportmainByramCosCob.sql","r",).read()) #insert the name of your SQL file
 rows = cursor.fetchall()
 conn.close()
 
